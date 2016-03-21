@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zxt-Eh-OGr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--脸书POP动画-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXo-l4-UX7">
+                                <rect key="frame" x="120" y="264" width="80" height="40"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.31372549020000001" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="VZZ-uf-tPU"/>
+                                    <constraint firstAttribute="height" constant="40" id="ejC-JD-uJK"/>
+                                </constraints>
+                                <state key="normal" title="ccc">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="popButtonWasClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="53y-yV-5fw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jXo-l4-UX7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EoM-XH-YhK"/>
+                            <constraint firstItem="jXo-l4-UX7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nXu-48-CHv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="脸书POP动画" id="EgF-fo-So4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="popButton" destination="jXo-l4-UX7" id="uFn-9r-XpA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="243"/>
+        </scene>
+        <!--Custom Modal View Controller-->
+        <scene sceneID="SeZ-3m-iGt">
+            <objects>
+                <viewController storyboardIdentifier="customModal" id="ncs-Xx-TBY" customClass="CustomModalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Abh-Rs-tV5"/>
+                        <viewControllerLayoutGuide type="bottom" id="2cR-59-vPa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K2V-hW-vKs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHP-OD-jJr">
+                                <rect key="frame" x="85" y="253.5" width="151" height="61"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.31372549020000001" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="Y4V-Ux-aDG"/>
+                                    <constraint firstAttribute="height" constant="61" id="eJD-p9-bXd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didClickOnClose:" destination="ncs-Xx-TBY" eventType="touchUpInside" id="evZ-9L-szs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.80000000000000004" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WHP-OD-jJr" firstAttribute="centerX" secondItem="K2V-hW-vKs" secondAttribute="centerX" id="3rM-wu-IWl"/>
+                            <constraint firstItem="WHP-OD-jJr" firstAttribute="centerY" secondItem="K2V-hW-vKs" secondAttribute="centerY" id="YYt-6h-J3w"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcs-jR-dfb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1104" y="243"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BgI-SJ-orr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zxt-Eh-OGr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ax2-Jw-r5h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1960784314" green="0.31372549020000001" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4aO-Ba-kTg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTz-6N-Ft1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11" y="259"/>
+        </scene>
+    </scenes>
+</document>
